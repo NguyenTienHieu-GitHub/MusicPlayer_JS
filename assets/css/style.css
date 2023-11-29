@@ -1,0 +1,316 @@
+:root {
+  --primary-color: #ec1f55;
+  --text-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(#ebebeb); 
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* TAB UI */
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #c23564;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 0px 0;
+}
+
+.tab-pane {
+    color: #333;
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.navbar {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+}
+nav-link active .bi-brightness-high-fill{
+  display: flex;
+  justify-content: end;
+}
+.player {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #333;
+  padding-top: 0;
+}
+
+.player .icon-pause {
+  display: none;
+}
+
+.player.playing .icon-pause {
+  display: inline-block;
+}
+
+.player.playing .icon-play {
+  display: none;
+}
+
+.dashboard {
+  position: relative;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* HEADER */
+.header {
+padding-top: 60px;
+padding-bottom: 10px;
+padding-left: 0px;
+}
+
+.info-song {
+  background-color: #fdfdfd;
+  padding-top: 6px;
+}
+
+.name-song {
+  font-size: medium;
+  font-weight: bolder;
+  white-space: nowrap;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.singer-song{
+  font-size: small;
+  white-space: nowrap;
+
+}
+
+/* CD */
+.cd {
+  display: flex;
+  margin: auto;
+  width: 90px;
+  padding-top: 0px;
+}
+
+.cd-thumb {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  background-size: cover;
+  margin: auto;
+}
+
+/* CONTROL */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0 8px 0;
+  max-width: 100%;
+  height: 55px;
+}
+
+.control .btn {
+  color: #666;
+  padding: 18px;
+  font-size: 13px;
+}
+
+.control .btn.active {
+  color: var(--primary-color);
+}
+
+.control .btn-toggle-play {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.form-range {
+  width: 30%;
+}
+/* 
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 6px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+} */
+
+.range-time {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.range-time .time-start,
+.time-end {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  font-size: 13px;
+}
+
+.volume {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  font-size: 13px;
+  justify-content: end;
+  top: 40%;
+
+}
+.volume-range {
+  width: 100px;
+}
+
+.volume .volume-icon .bi-volume-mute-fill{
+  display: none;
+  font-size: larger;
+}
+.volume .volume-icon .bi-volume-down-fill {
+  display: inline-block;
+  font-size: larger;
+} 
+.volume .volume-icon .bi-volume-up-fill {
+  display: none;
+  font-size: larger;
+}
+
+/* PLAYLIST */
+.playlist {
+  padding: 12px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 74vh; /* Đặt chiều cao tối đa của thẻ div */
+  overflow: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước */
+  border-radius: 10px;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.song.active {
+  background-color: var(--primary-color);
+}
+
+/*Tạo cảm giác nhấn */
+.song:active {
+  opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+  color: #fff;
+}
+
+.song .thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 8px;
+}
+
+.song .body {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.song .title {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.song .author {
+  font-size: 12px;
+  color: #999;
+}
+
+.song .option {
+  padding: 16px 8px;
+  color: #999;
+  font-size: 18px;
+}
